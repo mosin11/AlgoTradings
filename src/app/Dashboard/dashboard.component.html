@@ -1,0 +1,58 @@
+<div class="container">
+  <h1>Dashboard</h1>
+  <div class="row">
+    <div class="col-sm-12 text-end my-3">
+      <button (click)="logout()" class="btn btn-primary">Logout</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div>
+        <label for="token_id">Token</label>
+        <input type="text" id="token_id" [(ngModel)]="token" readonly />
+      </div>
+      <div>
+        <label for="sid">SID</label>
+        <input type="text" id="sid" [(ngModel)]="sid" readonly />
+      </div>
+      <div>
+        <label for="serverid">HandshakeServerId</label>
+        <input type="text" id="serverid" [(ngModel)]="handshakeServerId" />
+      </div>
+      <div>
+        <label for="channel_number">Channel Number</label>
+        <input type="text" id="channel_number" [(ngModel)]="channelNumber" />
+      </div>
+
+      <button (click)="wconnect('Hsm')">Connect HSM</button>
+      <button (click)="wconnect('Hsi')">Connect HSI</button>
+     <!-- app.component.html -->
+<button (click)="sendCommand('cp', channelNumber)" class="btn btn-danger">Pause</button>
+<button (click)="sendCommand('cr', channelNumber)" class="btn btn-success">Resume</button>
+
+<!-- Add an input field for the channel number -->
+<input type="text" [(ngModel)]="channelNumber" placeholder="Enter Channel Number" />
+ 
+      <button (click)="subscribeToScrips()">Subscribe Scrips</button>
+      <button (click)="subscribeToIndices()">Subscribe Indices</button>
+      <button (click)="subscribeToDepth()">Subscribe Depth</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Streaming Scrips</h2>
+      <textarea id="stream_scrips" rows="10" cols="50" [(ngModel)]="streamScrips"></textarea>
+    </div>
+    <div class="col-sm-6">
+      <h2>Streaming Orders</h2>
+      <textarea id="stream_scrips1" rows="10" cols="50" [(ngModel)]="streamScrips1"></textarea>
+    </div>
+  </div> 
+  <div class="row my-3">
+    <div class="col-sm-12">
+        <app-option-chain></app-option-chain>
+    </div>
+  </div>
+</div>

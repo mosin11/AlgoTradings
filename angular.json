@@ -16,6 +16,8 @@
             "outputPath": "dist/algo-trading",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/AlgoTrading/",
+            
             "polyfills": [
               "zone.js"
             ],
@@ -24,12 +26,17 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
