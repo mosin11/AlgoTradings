@@ -25,7 +25,7 @@ REM npm install -g angular-cli-ghpages
 
 REM Wait for 5 seconds before proceeding
 timeout /t 2 /nobreak
-npm run build:prod
+npm run build
 ng add angular-cli-ghpages
 REM Build the project
 echo "Building the project..."
