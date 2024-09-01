@@ -24,4 +24,4 @@ echo "Deployment complete at %DEPLOY_TIME_FORMATTED%" >> deploy_log.txt
 
 REM Open the deployed site in the default web browser
 echo "Deployment complete. Opening the site..."
-start https://mosin11.github.io/AlgoTrading/
+start https://mosin11.github.io/AlgoTradings/

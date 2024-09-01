@@ -10,7 +10,7 @@ REM Wait for 5 seconds before proceeding
 timeout /t 2 /nobreak
 
 REM Add remote repositories
-git remote add origin https://github.com/mosin11/AlgoTrading.git
+git remote add origin https://github.com/mosin11/AlgoTradings.git
 timeout /t 2 /nobreak
 git push -u origin main
 
