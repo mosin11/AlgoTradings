@@ -120,7 +120,8 @@ export class DashboardComponent {
       this.tokenService.clearTokens();
       this.router.navigate(['/login']);
     }
-    // Navigate to the login page or any other route
+    // Navigate to the login page or any other route src/app/Dashboard/dashboard.component.ts /workspaces/AlgoTradings/src/app/Dashboard/dashboard.component.ts
+    
   }
 
 
